@@ -1,16 +1,17 @@
 <?php
 
 
-$servername = "localhost";
-$username = "root";
-$password = "2245";
-$dbname = "php_crud_tutorial";
+$servername = "127.0.0.1";
+username = "root";
+$password = 112233;
+$dbname = "busticketdb";
+$port = 3306;
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
-if(!$conn){
-      die("Connection Failed!." .mysqli_connect_error());
-}
+// Create connections
+// $conn = mysqli_connect($servername, $username, $password,$port);
+// if(!$conn){
+//       die("Connection Failed!." .mysqli_connect_error());
+// }
 
 
 

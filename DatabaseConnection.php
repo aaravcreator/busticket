@@ -11,15 +11,15 @@ class DatabaseConnection {
     function __construct() {
         $this->db_host = 'localhost';
         $this->db_username = 'root';
-        $this->db_password =  '2245';
-        $this->db_databasename = 'php_crud_tutorial';
+        $this->db_password =  '';
+        $this->db_databasename = 'busticketdb';
         $this->db_port = 3306;
-        $this->db_socket = '/Applications/MAMP/tmp/mysql/mysql.sock';
+        // $this->db_socket = '';
         $this->db_connect();
     }
 
     private function db_connect() {
-        $this->mysqli = new mysqli($this->db_host, $this->db_username, $this->db_password, $this->db_databasename, $this->db_port, $this->db_socket);
+        $this->mysqli = new mysqli($this->db_host, $this->db_username,  $this->db_databasename, $this->db_port);
         if ($this->mysqli->connect_error) {
             die('Connection Failed' . $this->mysqli->connect_error);
         }

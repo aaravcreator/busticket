@@ -24,11 +24,11 @@ $results = $newSelectInstance->selectData('registered_users');
             <th scope="col">Action</th>
         </tr>
     </thead>
+    <tbody>
     <?php
     foreach ($results as $row) {
-        printf(
-            "<tbody>
-            <tr>
+            printf(
+            "<tr>
                 <td>%s</td>
                 <td>%s</td>
                 <td>%s</td>
@@ -44,8 +44,7 @@ $results = $newSelectInstance->selectData('registered_users');
                     <button class='btn btn-primary'><a href='update.php?id=%d' class='text-white text-decoration-none'>Edit</a></button> 
                     <button class='btn btn-danger'><a href='index.php?id=%d' class='text-white text-decoration-none'>Delete</a></button>
                 </td>
-            </tr>
-        </tbody>",
+            </tr>",
             htmlspecialchars($row["id"], ENT_QUOTES),
             htmlspecialchars($row["name"], ENT_QUOTES),
             htmlspecialchars($row["bus_no"], ENT_QUOTES),
@@ -66,6 +65,7 @@ $results = $newSelectInstance->selectData('registered_users');
         );
     }
     ?>
+    </tbody>
 </table>
 </body>
 </html>
